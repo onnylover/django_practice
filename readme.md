@@ -19,9 +19,9 @@
 ```
 ### 5. Organize fold
 ### 6. Set default setting (settings.py)
-1) time zone (locale)
+1) time zone (locale, rec. capital)
 ```python
-TIME_ZONE = "Asia/seoul"
+TIME_ZONE = "ASIA/SEOUL"
 ```
 2) database
 ```python
