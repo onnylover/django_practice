@@ -2,23 +2,23 @@
 #[Django Practice]
 
 ## ▶︎ Making django project and Setting
-###1. Making new pycharm project
-###2. Install django (terminal) :
+### 1. Making new pycharm project
+### 2. Install django (terminal) :
 ```terminal
 (venv) # pip install django
 ```
-###3. Install mysqlclient (on macbook, 3.x python)
+### 3. Install mysqlclient (on macbook, 3.x python)
 ```terminal
 (venv) # pip install mysql-connector-python
 (venv) # pip install pymysql
 ```
 
-###4. Making new django project
+### 4. Making new django project
 ```terminal
 (venv) # django-admin startproject django_practice
 ```
-###5. Organize fold
-###6. Set default setting (settings.py)
+### 5. Organize fold
+### 6. Set default setting (settings.py)
 1) time zone (locale)
 ```python
 TIME_ZONE = "Asia/seoul"
@@ -41,7 +41,7 @@ DATABASES = {
 import pymysql
 pymysql.install_as_MySQLdb()
 ```
-###7. Maing django project control app DB
+### 7. Making django project control app DB
 ```terminal
 (venv) # python manage.py makemigrations
 (venv) # python manage.py migrate
@@ -52,13 +52,13 @@ from django.db.backends.mysql.base import DatabaseWrapper
 DatabaseWrapper.data_types['DateTimeField'] = 'datetime'
 ```
 
-###8. Create superuser for project
+### 8. Create superuser for project
 ```terminal
 (venv) # python manage.py createsuperuser
 ```
 
 
-###9. Reconfirm all settings
+### 9. Reconfirm all settings
 1) running server
 ```terminal
 (venv) # python manage.py runserver 0.0.0.0:9999
@@ -68,14 +68,14 @@ DatabaseWrapper.data_types['DateTimeField'] = 'datetime'
 - log in with admin (password)
 
 ## ▶︎ Append application on django project
-###1. Making integrated template directory 
+### 1. Making integrated template directory 
 
 1) make fold : template
 2) add settings.py
 ```python
 'DIRS' : [os.path.join(BASE_DIR, 'templastes')]
 ```
-###2. Making (helloworld) application
+### 2. Making (helloworld) application
 1) make application
 ```terminal
 (venv) # python manage.py startapp helloworld
