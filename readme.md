@@ -1,5 +1,5 @@
 
-#[Django Practice]
+# [Django Practice]
 
 ## ▶︎ Making django project and Setting
 ### 1. Making new pycharm project
