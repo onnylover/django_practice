@@ -17,7 +17,7 @@
 ```terminal
 (venv) # django-admin startproject django_practice
 ```
-### 5. Organize fold
+### 5. Organize folder
 ### 6. Set default setting (settings.py)
 1) time zone (locale, rec. capital)
 ```python
@@ -70,7 +70,7 @@ DatabaseWrapper.data_types['DateTimeField'] = 'datetime'
 ## ▶︎ Append application on django project
 ### 1. Making integrated template directory 
 
-1) make fold : template
+1) make folder : template
 2) add settings.py
 ```python
 'DIRS' : [os.path.join(BASE_DIR, 'templastes')]
