@@ -95,3 +95,25 @@ urlpatterns = [
 ]
 ```
 5) repeat
+
+## ▶︎ Make email application
+### 1. Making integrated template directory
+1) make application
+```terminal
+(venv) # python manage.py startapp helloworld
+```
+2) registry application (settings.py) 
+```python
+INSTALLED_APPS = [
+    'emaillist01',
+]
+```
+3) add application directory on template as emaillist01
+
+4) setting urls 
+```python
+urlpatterns = [
+    path('emaillist/', helloworld.views.hello1),
+]
+```
+5) repeat
