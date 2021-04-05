@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from emaillist01 import models
-from django.http import HttpResponseRedirect
-#안쓰는거는 없애주는게 좋
-#from django.http import HttpResponse
-
 #from emaillist01.models import findall() 로도 가능함
+from django.http import HttpResponseRedirect
+#안쓰는거는 없애주는게 좋음
+#from django.http import HttpResponse
 
 # Create your views here.
 
