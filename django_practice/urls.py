@@ -27,4 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('emaillist01/', emaillist01views.index),
+    path('emaillist01/form', emaillist01views.form),
+    path('emaillist01/add', emaillist01views.add),
 ]
