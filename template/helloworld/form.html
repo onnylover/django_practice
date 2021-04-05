@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form test</title>
+</head>
+<body>
+    <h1>
+        Join
+    </h1>
+    <form action="/join" method="post">{% csrf_token %}
+        Email : <input type="text" name="email" value=""/>
+        <br/><br/>
+        Password : <input type="password" name="password" value=""/>
+        <br/><br/>
+        Gender <input type="radio" name="gender" value="male"/> Male <input type="radio" name="gender" value="female"/> Female
+        <br/><br/>
+        Hobby : <input type="checkbox" name="hobbies" value="cooking"> Cooking
+                <input type="checkbox" name="hobbies" value="readbook"> Read Book
+                <input type="checkbox" name="hobbies" value="travel"> Travel
+                <input type="checkbox" name="hobbies" value="walk"> Walking
+        <br/><br/>
+        Self indtroduce:<br/>
+        <textarea name="desc" style="width:200px, height:50px"></textarea>
+        <br/><br/>
+        <input type="submit" value="Join"/>
+
+    </form>
+    <br/><br/>
+    <a href="/">Back to Main</a>
+</body>
+</html>
