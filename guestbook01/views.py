@@ -19,10 +19,14 @@ def add(request):
     return HttpResponseRedirect("/guestbook01")
 
 def deleteform(request):
+    # no = request.GET["no"]
+    # data = {"no":no}
+    # return render(request, "guestbook01/deleteform.html", data)
+    # 위에 처럼 넣으면 템플릿에서 no의 value를 no로 받을 수 있음
     return render(request, "guestbook01/deleteform.html")
 
 def delete(request):
-    no = request.POST.get('no', None)
+    no = request.POST["no"]
     password = request.POST["password"]
     models.deletebynoandpw(no, password)
     return HttpResponseRedirect("/guestbook01")

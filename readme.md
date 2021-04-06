@@ -139,4 +139,20 @@ urlpatterns = [
     path('guestbook01/', guestbook01.views.index),
 ]
 ```
-5) repeat
+5) template filter
+    - linebreakbr : "aaa\nbbb"  --|->  "aaa<br>bbb"
+    
+    - mathfilters
+      - 설치
+       ```terminal
+       (venv) # pip install django-mathfilters
+       ```
+    - setting.py / apps
+      ```python
+      'mathfilters'
+      ```
+    - use
+       ```html
+       {% load mathfilters %}
+       ```
+    

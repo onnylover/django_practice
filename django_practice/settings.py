@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'helloworld',
     'emaillist01',
     'guestbook01',
+    'mathfilters',
+
 ]
 
 MIDDLEWARE = [

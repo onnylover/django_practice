@@ -1,3 +1,4 @@
+{% load mathfilters %}
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -22,13 +23,13 @@
 	{% for result in results %}
 	<table width=510 border=1>
 		<tr>
-			<td>[{{ result.no }}]</td>
+			<td>[{{ results | length | sub:forloop.counter | add:1 }}]</td>
 			<td>{{ result.name }}</td>
 			<td>{{ result.reg_date }}</td>
 			<td><a href="/guestbook01/deleteform?no={{ result.no }}">삭제</a></td>
 		</tr>
 		<tr>
-			<td colspan=4>{{ result.message }}</td>
+			<td colspan=4>{{ result.message | linebreaksbr }}</td>
 		</tr>
 	</table>
 	<br>
