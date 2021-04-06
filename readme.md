@@ -96,7 +96,7 @@ urlpatterns = [
 ```
 5) repeat
 
-## ▶︎ Make emaillist application
+## ▶︎ Make emaillist01 application (SQL Query)
 ### 1. Making integrated template directory
 1) make application
 ```terminal
@@ -151,8 +151,86 @@ urlpatterns = [
       ```python
       'mathfilters'
       ```
-    - use
+    - add on top of template 
        ```html
        {% load mathfilters %}
        ```
-    
+   
+## ▶︎ Make emaillist02 application (ORM)
+### 1. Making integrated template directory
+1) make application
+```terminal
+(venv) # python manage.py startapp emaillist02
+```
+2) registry application (settings.py) 
+```python
+INSTALLED_APPS = [
+    'emaillist02',
+]
+```
+3) add application directory on template as emaillist02
+
+4) make table and define of Model class
+- define class
+```python
+class Emaillist(models.Model):
+    # pk는 자동 생성
+    first_name = models.CharField(max_length=45)
+    last_name = models.CharField(max_length=45)
+    email = models.CharField(max_length=200)
+
+    def __str__(self):
+        return f"Emaillist({self.first_name},{self.last_name},{self.email})"
+```
+- make table
+```terminal
+(venv) # python manage.py makemigrations
+(venv) # python manage.py migrate
+```
+
+5) setting urls 
+```python
+urlpatterns = [
+    path('emaillist02/', emaillist02.views.index),
+]
+```
+
+## ▶︎ Make guestbook02 application (ORM)
+### 1. Making integrated template directory
+1) make application
+```terminal
+(venv) # python manage.py startapp guestbook02
+```
+2) registry application (settings.py) 
+```python
+INSTALLED_APPS = [
+    'guestbook02',
+]
+```
+3) add application directory on template as guestbook02
+
+4) make table and define of Model class
+- define class
+```python
+class Guestbook(models.Model):
+    name = models.CharField(max_length=45)
+    password = models.CharField(max_length=45)
+    message = models.CharField(max_length=4000)
+    regdate = models.DateTimeField(auto_now=True)
+    #reg date에 대한 포맷팅 설정 해줘야 함
+
+    def __str__(self):
+        return f"Guestbook : {self.name}, {self.password}, {self.message}, {self.regdate}"
+```
+- make table
+```terminal
+(venv) # python manage.py makemigrations
+(venv) # python manage.py migrate
+```
+
+5) setting urls 
+```python
+urlpatterns = [
+    path('guestbook02/', guestbook02.views.index),
+]
+```

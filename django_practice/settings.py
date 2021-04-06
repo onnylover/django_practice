@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'emaillist01',
     'guestbook01',
     'mathfilters',
-
+    'emaillist02',
+    'guestbook02',
 ]
 
 MIDDLEWARE = [
